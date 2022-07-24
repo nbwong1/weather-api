@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- linking bootstrap -->
+
+        <!-- linking jquery -->
+
+        <!-- linking awesomefont -->
+
+        <!-- linking stylesheet -->
+        <link rel="stylesheet" href="./assets/css/styles.css">
+    </head>
+    <body>
+        <!-- weather dashboard title -->
+        <header>
+            <h1>Weather Dashboard</h1>
+        </header>
+        
+        <!-- this is where the sidebar will be, the sidebar will include Search and search history -->
+        <sidebar>
+            <div id="search">
+                <h2>Search for a City:</h2>
+                <input>
+                <button>Search</button>
+            </div>
+            <div id="search-history"></div>
+        </sidebar>
+        
+        <!-- current forecast for the city that has been fetched will show up here -->
+        <div id="current-forecast"></div>
+
+        <!-- the five day forecast for the city will show up here -->
+        <div id="five-day-forecast">
+            <div>
+                <h3>5-day Forecast:</h3>
+            </div>
+            <!-- The results for the five day forecast should pull here -->
+            <div>
+                <card></card>
+                <card></card>
+                <card></card>
+                <card></card>
+                <card></card>
+            </div>
+            
+        </div>
+        
+        
+        <script src="./assets/js/script.js" async defer></script>
+    </body>
+</html>
