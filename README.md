@@ -8,7 +8,7 @@ I have had difficulty loading data stored from my local storage into my page, bu
 In addition, I plan on providing more javascript to fetch the data from the Weather API.
 
 ## Screenshot
-
+![weater-application](https://github.com/nbwong1/weather-api/blob/main/assets/weather-dashboard.png)
 
 ## Credits
 
