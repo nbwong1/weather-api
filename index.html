@@ -32,14 +32,18 @@
         <!-- this is where the sidebar will be, the sidebar will include Search and search history -->
         <aside class="sidebar">
             <!-- search form -->
-            <div id="search">
+            <div id="searchSection">
                 <h2>Search for a City:</h2>
-                <input>
-                <button>Search</button>
-            </div>
+                <form id="city-form" method="POST">
+                    <input type=text name="city" id="city-text"></input>
+                    <button id="searchButton">Search</button>
+                </form>
+            <!-- </div> -->
             
             <!-- search history -->
-            <div id="search-history"></div>
+            <!-- <div id="search-history"> -->
+               <ul id="city-list"></ul>
+            </div>
         </aside>
         
         <!-- current forecast for the city that has been fetched will show up here -->

@@ -21,3 +21,59 @@ console.log(todayPlusFour);
 var todayPlusFive = moment().add(5, 'days').format("l");
 $("#today-plus-five").text(todayPlusFive);
 console.log(todayPlusFive);
+
+// variables for city search
+var cityInput = document.querySelector("#city-text");
+var citySearchForm = document.querySelector("#city-form");
+var cityList = document.querySelector("#city-list");
+var cityCountSpan = document.querySelector("#city-count")
+
+var cities = [];
+
+// saving the last searched city info in local storage
+function renderCities() {
+    cityList.innerHTML = "";
+    cityCountSpan.textContent = cities.length;
+
+    for (var i = 0; i < cities.length; i++) {
+        var city = cities[i];
+
+        var button = document.createElement("li");
+        li.textContent = city;
+        li.setAttribute("data-index", i);
+
+        cityList.appendChild(li);
+    }
+}
+
+function init() {
+    var storedCities = JSON.parse(localStorage.getItem("cities"));
+
+    if (storedCities !== null) {
+        cities = storedCities;
+    }
+
+    renderCities();
+}
+
+function storeCities() {
+    localStorage.setItem("cities", JSON.stringify(cities));
+}
+
+citySearchForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    var cityText = cityInput.value.trim();
+
+    if (cityText === "") {
+        return;
+    }
+
+    cities.push(cityText);
+    cityInput.value = "";
+
+    storeCities();
+    renderCities();
+});
+
+init()
