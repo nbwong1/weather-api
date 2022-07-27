@@ -1,114 +1,119 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- linking bootstrap -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
 
-        <!-- linking jquery -->
-        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- linking bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
 
-        <!-- linking awesomefont -->
+    <!-- linking jquery -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
 
-        <!-- linking stylesheet -->
-        <link rel="stylesheet" href="./assets/css/styles.css">
+    <!-- linking awesomefont -->
 
-        <!-- linking moment.js -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    <!-- linking stylesheet -->
+    <link rel="stylesheet" href="./assets/css/styles.css">
 
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    <!-- linking moment.js -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 
-    </head>
-    <body>
-        <!-- weather dashboard title -->
-        <header class="header">
-            <h1>Weather Dashboard</h1>
-        </header>
-        
-        <!-- this is where the sidebar will be, the sidebar will include Search and search history -->
-        <aside class="sidebar">
-            <!-- search form -->
-            <div id="searchSection">
-                <h2>Search for a City:</h2>
+</head>
+
+<body>
+    <!-- weather dashboard title -->
+    <header class="header">
+        <h1>Weather Dashboard</h1>
+    </header>
+
+    <!-- this is where the sidebar will be, the sidebar will include Search and search history -->
+    <aside class="sidebar">
+        <!-- search form -->
+        <div id="searchSection">
+            <h2>Search for a City:</h2>
+            <div>
                 <form id="city-form" method="POST">
-                    <input type=text name="city" id="city-text"></input>
-                    <button id="searchButton">Search</button>
+                    <input type="type" name="city" id="city-text"></input>
+                    <input type="submit" value="Search"id="searchButton"></input>
                 </form>
-            <!-- </div> -->
-            
-            <!-- search history -->
-            <!-- <div id="search-history"> -->
-               <ul id="city-list"></ul>
             </div>
-        </aside>
-        
-        <!-- current forecast for the city that has been fetched will show up here -->
-        <div class="content">
-            <div id="current-forecast">
-                <h4 id="todays-date"></h4>
-                    <p>Temp: </p>
-                    <p>Wind: </p>
-                    <p>Humidity: </p>
-                    <p>UV Index: </p>
-                </ul>
-            </div>
-
-            <!-- the five day forecast for the city will show up here -->
-            <div id="five-day-forecast">
-                <div>
-                    <h5>5-day Forecast:</h5>
-                <!-- The results for the five day forecast should pull here -->
-                    <div>
-                        <card class="card">
-                            <h6 id="today-plus-one"></h6>
-                            <img>
-                            <p>Temp: </p>
-                            <p>Wind: </p>
-                            <p>Humidity: </p>
-                        </card>
-
-                        <card class="card">
-                            <h6 id="today-plus-two">Card 2 (insert)</h6>
-                            <img>
-                            <p>Temp: </p>
-                            <p>Wind: </p>
-                            <p>Humidity: </p>
-                        </card>
-
-                        <card class="card">
-                            <h6 id="today-plus-three">Card 3 (insert)</h6>
-                            <img>
-                            <p>Temp: </p>
-                            <p>Wind: </p>
-                            <p>Humidity: </p>
-                        </card>
-
-                        <card class="card">
-                            <h6 id="today-plus-four">Card 4 (insert)</h6>
-                            <img>
-                            <p>Temp: </p>
-                            <p>Wind: </p>
-                            <p>Humidity: </p>
-                        </card>
-
-                        <card class="card">
-                            <h6 id="today-plus-five">Card 5 (insert)</h6>
-                            <img>
-                            <p>Temp: </p>
-                            <p>Wind: </p>
-                            <p>Humidity: </p>
-                        </card>
-
-                    </div>
-                </div>        
-            </div>
-
         </div>
-        
-        <script src="./assets/js/script.js"></script>
-    </body>
+        <br>
+            <!-- search history -->
+         <div id="search-history">
+                <ul id="city-list"></ul>
+         </div>
+    </aside>
+
+    <!-- current forecast for the city that has been fetched will show up here -->
+    <div class="content">
+        <div id="current-forecast">
+            <h4 id="todays-date"></h4>
+            <p>Temp: </p>
+            <p>Wind: </p>
+            <p>Humidity: </p>
+            <p>UV Index: </p>
+            </ul>
+        </div>
+
+        <!-- the five day forecast for the city will show up here -->
+        <div id="five-day-forecast">
+            <div>
+                <h5>5-day Forecast:</h5>
+                <!-- The results for the five day forecast should pull here -->
+                <div>
+                    <card class="card">
+                        <h6 id="today-plus-one"></h6>
+                        <img>
+                        <p>Temp: </p>
+                        <p>Wind: </p>
+                        <p>Humidity: </p>
+                    </card>
+
+                    <card class="card">
+                        <h6 id="today-plus-two">Card 2 (insert)</h6>
+                        <img>
+                        <p>Temp: </p>
+                        <p>Wind: </p>
+                        <p>Humidity: </p>
+                    </card>
+
+                    <card class="card">
+                        <h6 id="today-plus-three">Card 3 (insert)</h6>
+                        <img>
+                        <p>Temp: </p>
+                        <p>Wind: </p>
+                        <p>Humidity: </p>
+                    </card>
+
+                    <card class="card">
+                        <h6 id="today-plus-four">Card 4 (insert)</h6>
+                        <img>
+                        <p>Temp: </p>
+                        <p>Wind: </p>
+                        <p>Humidity: </p>
+                    </card>
+
+                    <card class="card">
+                        <h6 id="today-plus-five">Card 5 (insert)</h6>
+                        <img>
+                        <p>Temp: </p>
+                        <p>Wind: </p>
+                        <p>Humidity: </p>
+                    </card>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+
 </html>
